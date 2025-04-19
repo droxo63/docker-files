@@ -18,6 +18,7 @@
     "@wdio/spec-reporter": "^9.12.6",
     "allure-commandline": "^2.33.0",
     "allure-mocha": "^3.2.1",
+    "chromedriver": "^135.0.2",
     "mocha": "^10.4.0",
     "pactum": "^3.7.6"
   },
