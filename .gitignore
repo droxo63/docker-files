@@ -1,0 +1,35 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Ambiente
+.env
+.env.test
+.DS_Store
+
+# IDEs/EDs
+.vscode/
+.idea/
+*.sw?
+
+# Allure reports
+allure-results/
+allure-report/
+
+# Logs
+logs/
+*.log
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+
+# Play
