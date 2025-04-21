@@ -13,6 +13,6 @@ WORKDIR /home/wdio/
 
 COPY . /home/wdio/
 
-RUN npm install  # Certifique-se de instalar todas as dependências
+RUN npm install --force 
 
 CMD [ "npm", "run", "wdio" ]
