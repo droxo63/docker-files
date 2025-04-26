@@ -1,18 +1,17 @@
-FROM node:latest
+FROM cypress/browsers:node-18.12.0-chrome-114
 
-RUN apt-get update
-RUN apt-get install -y x11vnc xvfb fluxbox wget wmctrl
-RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
-    && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list
-RUN apt-get update && apt-get -y install google-chrome-stable \
-    && rm /etc/apt/sources.list.d/google-chrome.list \
-    && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
-    && sed -i 's/"$HERE\/chrome"/"$HERE\/chrome" --no-sandbox/g' /opt/google/chrome/google-chrome
+# Define o diretório de trabalho
 
-WORKDIR /home/wdio/
+WORKDIR /app
 
-COPY . /home/wdio/
+# Copia os arquivos do projeto para dentro da imagem
 
-RUN npm install --force 
+COPY . .
 
-CMD [ "npm", "run", "wdio" ]
+# Instala as dependências do projeto
+
+RUN npm install
+
+# Comando padrão para rodar os testes em modo headless
+
+CMD ["npx", "cypress", "run", "--browser", "chrome"]
