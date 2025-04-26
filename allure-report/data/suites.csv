@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","433","Deve autenticar o usuário corretamente","Testes de autenticação","Sat Apr 19 15:08:17 BRT 2025","passed","Sat Apr 19 15:08:18 BRT 2025","","","",""
+"","21","Deve falhar ao autenticar com credenciais erradas","Testes de API com Pactum","Sat Apr 26 14:14:49 BRT 2025","passed","Sat Apr 26 14:14:49 BRT 2025","","","",""
+"","920","Deve autenticar o usuário corretamente","Testes de API com Pactum","Sat Apr 26 14:14:47 BRT 2025","passed","Sat Apr 26 14:14:48 BRT 2025","","","",""

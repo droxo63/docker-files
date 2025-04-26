@@ -1,1 +1,1 @@
-[]
+[{"uid":"36c6160d9fca9dc1","name":"Deve autenticar o usuário corretamente","time":{"start":1745687687562,"stop":1745687688482,"duration":920},"status":"passed","severity":"normal"},{"uid":"e210903fd1ff449d","name":"Deve autenticar o usuário corretamente","time":{"start":1745086097936,"stop":1745086098369,"duration":433},"status":"passed","severity":"normal"},{"uid":"18b802a812884467","name":"Deve falhar ao autenticar com credenciais erradas","time":{"start":1745687689225,"stop":1745687689246,"duration":21},"status":"passed","severity":"normal"}]

@@ -4,9 +4,10 @@
   "description": "Testes de imagem usando Dockerfiles",
   "main": "index.js",
   "scripts": {
-    "test": "mocha './test/api/login.test.js'",
-    "wdio": "wdio run wdio.conf.js",
-     
+    "test": "mocha --reporter allure-mocha --timeout 5000 './test/api/login.test.js'",
+    "generate-report": "allure generate allure-results --clean && allure open",
+    "test-and-report": "npm test && npm run generate-report",
+    "wdio": "wdio run wdio.conf.js"
   },
   "keywords": [],
   "author": "Diego Pereira",
