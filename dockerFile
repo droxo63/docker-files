@@ -1,17 +1,13 @@
-FROM cypress/browsers:node-18.12.0-chrome-114
+# File: Dockerfile
 
-# Define o diretório de trabalho
+FROM node:20
 
 WORKDIR /app
 
-# Copia os arquivos do projeto para dentro da imagem
-
-COPY . .
-
-# Instala as dependências do projeto
+COPY package*.json ./
 
 RUN npm install
 
-# Comando padrão para rodar os testes em modo headless
+COPY . .
 
-CMD ["npx", "cypress", "run", "--browser", "chrome"]
+CMD ["npm", "run", "test"]

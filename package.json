@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha './test/api/login.test.js'",
-    "wdio": "wdio run wdio.conf.js"
+    "wdio": "wdio run wdio.conf.js",
+     
   },
   "keywords": [],
   "author": "Diego Pereira",
@@ -19,6 +20,7 @@
     "allure-commandline": "^2.33.0",
     "allure-mocha": "^3.2.1",
     "chromedriver": "^135.0.2",
+    "cypress": "^14.3.2",
     "mocha": "^10.4.0",
     "pactum": "^3.7.6",
     "wdio-chromedriver-service": "^8.1.1"
