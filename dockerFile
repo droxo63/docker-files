@@ -1,13 +1,24 @@
-# File: Dockerfile
+FROM node:20-bullseye
 
-FROM node:20
+# Instalar o OpenJDK 17
+RUN apt-get update && \
+    apt-get install -y openjdk-17-jre && \
+    apt-get clean
 
+# Definir as variáveis de ambiente do Java
+ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+ENV PATH="$JAVA_HOME/bin:$PATH"
+
+# Definir o diretório da aplicação
 WORKDIR /app
 
-COPY package*.json ./
-
-RUN npm install && npm install -g allure-commandline
+# Copiar os arquivos da aplicação e instalar as dependências
 
 COPY . .
+RUN npm install
 
-CMD ["npm", "run", "test"]
+# Criar volume para persistir os relatórios
+VOLUME ["/app/allure-report"]
+
+# Comando para rodar os testes e gerar o relatório
+CMD ["npm", "run", "test-and-report"]
